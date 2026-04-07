@@ -1,0 +1,20 @@
+{
+  "name": "jeanrk88-marketplace",
+  "plugins": [
+    {
+      "name": "jeanrk88-code-skills",
+      "source": {
+        "source": "local",
+        "path": "./.codex/plugins/jeanrk88-code-skills"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity",
+      "interface": {
+        "displayName": "Jeanrk88 Code Skills"
+      }
+    }
+  ]
+}

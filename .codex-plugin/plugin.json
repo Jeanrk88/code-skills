@@ -1,0 +1,6 @@
+{
+  "name": "jeanrk88-code-skills",
+  "version": "1.0.0",
+  "description": "Public Codex skill pack by Jeanrk88 for frontend design, software engineering, QA, and application security.",
+  "skills": "./skills/"
+}
