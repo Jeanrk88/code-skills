@@ -1,4 +1,4 @@
-# 🚀 Codex Code Skills
+# Codex Code Skills
 
 > **Antes de um software escalar, ele precisa nascer com padrão.**
 
@@ -6,7 +6,7 @@
 
 <div align="center">
 
-## ✨ O que é Code Skills?
+## O que é Code Skills?
 
 Um **pack operacional** de skills para Codex que eleva a barra de design, engenharia, QA e segurança.  
 Instale uma vez. Trabalhe com mais consistência, profundidade e qualidade.
@@ -17,18 +17,18 @@ Instale uma vez. Trabalhe com mais consistência, profundidade e qualidade.
 
 ---
 
-## 🎯 Por que usar?
+## Por que usar?
 
-### ❌ Problema
+### Problema
 
-- 🎨 Interface genérica sem diferenciação
-- 🏗️ Arquitetura frouxa e débito técnico
-- ✅ QA superficial (só testa happy path)
-- 🔒 Segurança deixada para depois
-- 📋 Decisões sem critério técnico claro
-- 🧪 Testes que não cobrem o importante
+- Interface genérica sem diferenciação
+- Arquitetura frouxa e débito técnico
+- QA superficial (só testa happy path)
+- Segurança deixada para depois
+- Decisões sem critério técnico claro
+- Testes que não cobrem o importante
 
-### ✅ Solução
+### Solução
 
 Toda vez que você usa um agente, precisa falar a mesma coisa:
 
@@ -44,13 +44,13 @@ Toda vez que você usa um agente, precisa falar a mesma coisa:
 
 ---
 
-## 🎓 As 4 Skills
+## As 4 Skills
 
 <table>
 <tr>
 <td width="25%" align="center">
 
-### 🎨 Frontend Design
+### Frontend Design
 
 Cria interfaces distintivas e production-grade.
 
@@ -71,7 +71,7 @@ Cria interfaces distintivas e production-grade.
 </td>
 <td width="25%" align="center">
 
-### 🏗️ Software Engineer
+### Software Engineer
 
 Auditoria técnica em nível world-class.
 
@@ -92,7 +92,7 @@ Auditoria técnica em nível world-class.
 </td>
 <td width="25%" align="center">
 
-### ✅ QA
+### QA
 
 Testa comportamento real end-to-end.
 
@@ -113,7 +113,7 @@ Testa comportamento real end-to-end.
 </td>
 <td width="25%" align="center">
 
-### 🔒 Security
+### Security
 
 Endurecimento de segurança operacional.
 
@@ -137,7 +137,7 @@ Endurecimento de segurança operacional.
 
 ---
 
-## 🔄 Fluxo Recomendado
+## Fluxo Recomendado
 
 ```
 Construir/iterar → Frontend Design → Software Engineer → QA → Security
@@ -145,7 +145,7 @@ Construir/iterar → Frontend Design → Software Engineer → QA → Security
    codifica       valida interface    audita código   testa flusos  hardening
 ```
 
-### 📋 Regra Prática
+### Regra Prática
 
 | Situação                      | Use                 |
 | ----------------------------- | ------------------- |
@@ -156,117 +156,120 @@ Construir/iterar → Frontend Design → Software Engineer → QA → Security
 
 ---
 
-## 📚 Exemplos Reais
+## Exemplos Reais
 
-### 💡 Exemplo 1: Revisar Interface
+### Exemplo 1: Revisar Interface
 
 **Você:**
 
 ```bash
-Use a skill frontend-design pra revisar esta landing page.
-Quero análise crítica de sofisticação, diferenciação e usabilidade.
-Depois proponha uma direção visual mais forte.
+/frontend-design
+Revisar esta landing page.
+Análise crítica de sofisticação, diferenciação e usabilidade.
 ```
 
 **Codex:**
 
-- ✓ Identifica problemas de hierarquia visual
-- ✓ Aponta ausência de direção estética
-- ✓ Sugere mudanças concretas (layout, tipografia, contraste, spacing)
+- Identifica problemas de hierarquia visual
+- Aponta ausência de direção estética
+- Sugere mudanças concretas (layout, tipografia, contraste, spacing)
 
-### 💡 Exemplo 2: Auditoria Técnica
+### Exemplo 2: Auditoria Técnica
 
 **Você:**
 
 ```bash
-Use a skill software-engineer para auditar este fluxo de autenticação.
+/software-engineer
+Auditar este fluxo de autenticação.
 Principais riscos de arquitetura, segurança e custo.
 ```
 
 **Codex:**
 
-- ✓ Encontra problemas de boundary
-- ✓ Aponta riscos de auth
-- ✓ Revisa fluxo de sessão/token
-- ✓ Destaca gargalos técnicos
+- Encontra problemas de boundary
+- Aponta riscos de auth
+- Revisa fluxo de sessão/token
+- Destaca gargalos técnicos
 
-### 💡 Exemplo 3: Teste Completo
-
-**Você:**
-
-```bash
-Use a skill qa para validar este fluxo de cadastro.
-Do começo ao fim, include browser testing e mobile.
-```
-
-**Codex:**
-
-- ✓ Roda testes existentes
-- ✓ Mapeia gaps
-- ✓ Testa a jornada
-- ✓ Captura screenshots
-- ✓ Aponta bugs reais
-
-### 💡 Exemplo 4: Endurecimento de Segurança
+### Exemplo 3: Teste Completo
 
 **Você:**
 
 ```bash
-Use a skill security para revisar esta API.
-Entrega um relatório com riscos importantes e fixes recomendados.
+/qa
+Validar este fluxo de cadastro do começo ao fim.
+Incluir browser testing e mobile, console errors.
 ```
 
 **Codex:**
 
-- ✓ Detecta stack
-- ✓ Encontra padrões inseguros
-- ✓ Classifica severidade
-- ✓ Organiza report acionável
+- Roda testes existentes
+- Mapeia gaps
+- Testa a jornada
+- Captura screenshots
+- Aponta bugs reais
+
+### Exemplo 4: Endurecimento de Segurança
+
+**Você:**
+
+```bash
+/security
+Revisar esta API.
+Relatório com riscos importantes e fixes recomendados.
+```
+
+**Codex:**
+
+- Detecta stack
+- Encontra padrões inseguros
+- Classifica severidade
+- Organiza report acionável
 
 ---
 
-## ⚙️ Estrutura do Repositório
+## Estrutura do Repositório
 
 ```
 .
-├── 📄 README.md                    # Este arquivo
-├── 📋 CHANGELOG.md
-├── 📄 LICENSE
-├── 📁 skills/
-│   ├── 🎨 frontend-design/
+├── README.md
+├── CHANGELOG.md
+├── LICENSE
+├── skills/
+│   ├── frontend-design/
 │   │   └── SKILL.md
-│   ├── 🏗️ software-engineer/
+│   ├── software-engineer/
 │   │   └── SKILL.md
-│   ├── ✅ qa/
+│   ├── qa/
 │   │   └── SKILL.md
-│   └── 🔒 security/
+│   └── security/
 │       ├── SKILL.md
-│       ├── 📁 references/
+│       ├── references/
 │       │   ├── attack-patterns.md
 │       │   ├── fix-templates.md
 │       │   ├── owasp-top10.md
 │       │   └── report-template.md
-│       └── 📁 scripts/
+│       └── scripts/
 │           ├── firewall_setup.py
 │           ├── security_scanner.py
 │           ├── secret_scanner.py
 │           └── ...
-└── 📁 examples/
+└── examples/
     ├── marketplace.personal.json
     └── marketplace.repo.json
 ```
 
 ---
 
-## 📦 Instalação
+## Instalação
 
 ### Pré-requisitos
 
-- ✅ Git
-- ✅ Codex
-- ✅ Acesso ao diretório de plugins
+- Git
+- Codex
+- Acesso ao diretório de plugins
 
-### 🏠 Instalação Pessoal
+### Instalação Pessoal
 
 <details>
 <summary><b>Clique para expandir</b></summary>
@@ -307,7 +310,7 @@ Crie o arquivo `~/.agents/plugins/marketplace.json`:
 
 </details>
 
-### 📂 Instalação por Projeto
+### Instalação por Projeto
 
 <details>
 <summary><b>Clique para expandir</b></summary>
@@ -351,55 +354,73 @@ Crie o arquivo `./.agents/plugins/marketplace.json`:
 
 ---
 
-## 🎮 Como Usar
+## Como Usar
 
-### 1️⃣ Uso Explícito (Recomendado)
+### Chamar Skills com Barra
 
-Fale claramente qual skill usar:
-
-```bash
-✓ Use a skill frontend-design para revisar esta página.
-✓ Use a skill software-engineer para auditar esta feature.
-✓ Use a skill qa para testar este fluxo completo.
-✓ Use a skill security para revisar esta API.
-```
-
-### 2️⃣ Uso por Intenção
-
-Descreva a tarefa e deixe o agente escolher:
+Use a **barra (/) antes do nome da skill**:
 
 ```bash
-✓ Quero revisão profunda da interface, focando em sofisticação e usabilidade.
-✓ Audite código como engenheiro senior com foco nos riscos de produção.
-✓ Teste este fluxo no navegador, incluindo mobile, estados de erro e console.
-✓ Análise de segurança da app, priorizando riscos mais graves.
+/frontend-design
+/software-engineer
+/qa
+/security
 ```
 
-### 💡 Dica de Ouro
+### Uso Explícito (Recomendado)
+
+Combine a skill com contexto claro:
+
+```bash
+/frontend-design
+Revisar esta página. Sofisticação, diferenciação e usabilidade.
+
+/software-engineer
+Auditar esta feature. Riscos de arquitetura, segurança e performance.
+
+/qa
+Testar este fluxo completo. Mobile, console errors, browser testing.
+
+/security
+Revisar esta API. Vulnerabilidades, OWASP Top 10, relatório final.
+```
+
+### Uso por Intenção
+
+Descreva a tarefa e deixe o agente escolher a skill:
+
+```bash
+Quero revisão profunda da interface, focando em sofisticação e usabilidade.
+Audite código como engenheiro senior com foco nos riscos de produção.
+Teste este fluxo no navegador, incluindo mobile, estados de erro e console.
+Análise de segurança da app, priorizando riscos mais graves.
+```
+
+### Dica de Ouro
 
 Quanto mais claro você for sobre:
 
-- 🎯 **Objetivo** da tarefa
-- 📋 **Contexto** do projeto
-- 🛠️ **Stack** usada
-- 🌍 **Ambiente** (dev/staging/prod)
-- 🚫 **Restrições** existentes
-- 🎁 **Resultado** esperado
+- **Objetivo** da tarefa
+- **Contexto** do projeto
+- **Stack** usada
+- **Ambiente** (dev/staging/prod)
+- **Restrições** existentes
+- **Resultado** esperado
 
 Melhor será a qualidade da skill.
 
 ---
 
-## 🔄 Atualizações
+## Atualizações
 
-### 🏠 Instalação Pessoal
+### Instalação Pessoal
 
 ```bash
 cd ~/.codex/plugins/codex-code-skills
 git pull
 ```
 
-### 📂 Instalação por Projeto
+### Instalação por Projeto
 
 ```bash
 cd ./plugins/codex-code-skills
@@ -410,16 +431,16 @@ git pull
 
 ---
 
-## 🗑️ Desinstalação
+## Desinstalação
 
-### 🏠 Instalação Pessoal
+### Instalação Pessoal
 
 ```bash
 rm -rf ~/.codex/plugins/codex-code-skills
 # Remove a entrada de ~/.agents/plugins/marketplace.json
 ```
 
-### 📂 Instalação por Projeto
+### Instalação por Projeto
 
 ```bash
 rm -rf ./plugins/codex-code-skills
@@ -428,18 +449,18 @@ rm -rf ./plugins/codex-code-skills
 
 ---
 
-## 🗓️ Roadmap
+## Roadmap
 
-- [ ] 🎨 Exemplos práticos por stack (React, Vue, Angular)
-- [ ] 📊 Assets visuais do plugin
-- [ ] 🏷️ Releases versionadas
-- [ ] 📖 Documentação extra de contribuição
-- [ ] 🔌 Integração com mais plataformas
-- [ ] 🧩 Novas skills especializadas
+- Exemplos práticos por stack (React, Vue, Angular)
+- Assets visuais do plugin
+- Releases versionadas
+- Documentação extra de contribuição
+- Integração com mais plataformas
+- Novas skills especializadas
 
 ---
 
-## 🧠 Filosofia
+## Filosofia
 
 <div align="center">
 
@@ -447,12 +468,12 @@ rm -rf ./plugins/codex-code-skills
 
 Ele nasce quando:
 
-| ✨  | Descrição                             |
-| --- | ------------------------------------- |
-| 🎨  | O design deixa de ser genérico        |
-| 🏗️  | A engenharia deixa de ser improvisada |
-| ✅  | O QA deixa de ser superficial         |
-| 🔒  | A segurança deixa de ser adiada       |
+| Item       | Descrição                             |
+| ---------- | ------------------------------------- |
+| Design     | O design deixa de ser genérico        |
+| Engenharia | A engenharia deixa de ser improvisada |
+| QA         | O QA deixa de ser superficial         |
+| Segurança  | A segurança deixa de ser adiada       |
 
 **Este repositório existe para tornar isso repetível.**
 
@@ -462,9 +483,9 @@ _Instale uma vez. Depois itere com mais consistência._
 
 ---
 
-## 👥 Para Quem É Isso?
+## Para Quem É Isso?
 
-### ✅ Para você se...
+### Para você se...
 
 - Usa Codex como multiplicador técnico
 - Quer mais consistência no output
@@ -473,7 +494,7 @@ _Instale uma vez. Depois itere com mais consistência._
 - Se importa com craft, robustez e clareza
 - Quer um agente mais útil em design, engenharia, QA e segurança
 
-### ❌ Não é para você se quer...
+### Não é para você se quer...
 
 - Resposta superficial
 - Frontend genérico
@@ -483,7 +504,7 @@ _Instale uma vez. Depois itere com mais consistência._
 
 ---
 
-## 📜 Licença
+## Licença
 
 MIT
 
