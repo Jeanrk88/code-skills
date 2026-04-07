@@ -460,7 +460,7 @@ Melhor será a qualidade da skill.
 Abra o **PowerShell** na IDE e execute:
 
 ```
-if (-not (Test-Path ".\.agents")) { Write-Host "Pasta .agents nao encontrada." -ForegroundColor Red; exit }; Set-Location .\.agents; $before = git rev-parse HEAD; git fetch origin main -q; $after = git rev-parse origin/main; if ($before -eq $after) { Write-Host "Ja esta atualizado." -ForegroundColor Green } else { git pull origin main -q; Write-Host "Atualizado! $($before.Substring(0,7)) -> $($after.Substring(0,7))" -ForegroundColor Cyan }; Set-Location ..
+git clone --filter=blob:none --no-checkout https://github.com/Jeanrk88/code-skills.git .\.agents; Set-Location .\.agents; git sparse-checkout init --no-cone; git sparse-checkout set skills; git checkout main; Set-Location ..; if (-not (Get-Command python -ErrorAction SilentlyContinue)) { $r = Read-Host "Python nao encontrado. Deseja instalar agora? (S/N)"; if ($r -eq 'S' -or $r -eq 's') { winget install Python.Python.3.12 } else { Write-Host "Python necessario para rodar a skill de security." -ForegroundColor Yellow } } else { Write-Host "Python OK: $((python --version))" -ForegroundColor Green }
 ```
 
 **O script irá:**
