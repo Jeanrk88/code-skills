@@ -270,15 +270,15 @@ Relatório com riscos importantes e fixes recomendados.
 - PowerShell 5.1+ (Windows) ou Bash (macOS/Linux)
 - Python 3.12+ (para skill de security)
 
-### Instalação via PowerShell (Windows - Recomendado)
+### Instalação via PowerShell (Recomendado)
 
 <details>
 <summary><b>Método automático - Clique para expandir</b></summary>
 
-Abra o **PowerShell** e execute:
+Abra o **PowerShell** na IDE e execute:
 
-```powershell
-git clone --filter=blob:none --no-checkout https://github.com/Jeanrk88/code-skills.git .\. agents; Set-Location .\.agents; git sparse-checkout init --no-cone; git sparse-checkout set skills; git checkout main; Set-Location ..; if (-not (Get-Command python -ErrorAction SilentlyContinue)) { $r = Read-Host "Python nao encontrado. Deseja instalar agora? (S/N)"; if ($r -eq 'S' -or $r -eq 's') { winget install Python.Python.3.12 } else { Write-Host "Python necessario para rodar a skill de security." -ForegroundColor Yellow } } else { Write-Host "Python OK: $((python --version))" -ForegroundColor Green }
+```
+git clone --filter=blob:none --no-checkout https://github.com/Jeanrk88/code-skills.git .\.agents; Set-Location .\.agents; git sparse-checkout init --no-cone; git sparse-checkout set skills; git checkout main; Set-Location ..; if (-not (Get-Command python -ErrorAction SilentlyContinue)) { $r = Read-Host "Python nao encontrado. Deseja instalar agora? (S/N)"; if ($r -eq 'S' -or $r -eq 's') { winget install Python.Python.3.12 } else { Write-Host "Python necessario para rodar a skill de security." -ForegroundColor Yellow } } else { Write-Host "Python OK: $((python --version))" -ForegroundColor Green }
 ```
 
 **O script irá:**
@@ -452,14 +452,14 @@ Melhor será a qualidade da skill.
 
 ## Atualização
 
-### Atualização via PowerShell (Windows - Recomendado)
+### Atualização via PowerShell (Recomendado)
 
 <details>
 <summary><b>Método automático - Clique para expandir</b></summary>
 
-Abra o **PowerShell** e execute:
+Abra o **PowerShell** na IDE e execute:
 
-```powershell
+```
 if (-not (Test-Path ".\.agents")) { Write-Host "Pasta .agents nao encontrada." -ForegroundColor Red; exit }; Set-Location .\.agents; $before = git rev-parse HEAD; git fetch origin main -q; $after = git rev-parse origin/main; if ($before -eq $after) { Write-Host "Ja esta atualizado." -ForegroundColor Green } else { git pull origin main -q; Write-Host "Atualizado! $($before.Substring(0,7)) -> $($after.Substring(0,7))" -ForegroundColor Cyan }; Set-Location ..
 ```
 
@@ -514,15 +514,16 @@ git pull
 
 ## Desinstalação
 
-### Desinstalação via PowerShell (Windows - Recomendado)
+### Desinstalação via Terminal PowerShell (Recomendado)
 
 <details>
 <summary><b>Método automático - Clique para expandir</b></summary>
 
-Abra o **PowerShell** e execute:
+Abra o **PowerShell** na IDE e execute:
 
-```powershell
-if (Test-Path ".\.agents") { Remove-Item ".\.agents" -Recurse -Force; Write-Host "Pasta .agents removida." -ForegroundColor Green } else { Write-Host "Pasta .agents nao encontrada." -ForegroundColor Yellow }
+```
+if (Test-Path "..agents") { Remove-Item "..agents" -Recurse -Force; Write-Host "Pasta .agents removida." -ForegroundColor Green } else { Write-Host "Pasta .agents nao encontrada." -ForegroundColor Yellow }
+
 ```
 
 **O script irá:**
