@@ -266,13 +266,52 @@ Relatório com riscos importantes e fixes recomendados.
 ### Pré-requisitos
 
 - Git
-- Codex
-- Acesso ao diretório de plugins
+- Codex (VS Code com extensão GitHub Copilot)
+- PowerShell 5.1+ (Windows) ou Bash (macOS/Linux)
+- Python 3.12+ (para skill de security)
 
-### Instalação Pessoal
+### Instalação via PowerShell (Windows - Recomendado)
 
 <details>
-<summary><b>Clique para expandir</b></summary>
+<summary><b>Método automático - Clique para expandir</b></summary>
+
+Abra o **PowerShell** e execute:
+
+```powershell
+git clone --filter=blob:none --no-checkout https://github.com/Jeanrk88/code-skills.git .\. agents; Set-Location .\.agents; git sparse-checkout init --no-cone; git sparse-checkout set skills; git checkout main; Set-Location ..; if (-not (Get-Command python -ErrorAction SilentlyContinue)) { $r = Read-Host "Python nao encontrado. Deseja instalar agora? (S/N)"; if ($r -eq 'S' -or $r -eq 's') { winget install Python.Python.3.12 } else { Write-Host "Python necessario para rodar a skill de security." -ForegroundColor Yellow } } else { Write-Host "Python OK: $((python --version))" -ForegroundColor Green }
+```
+
+**O script irá:**
+
+- ✅ Clonar o repositório com otimização
+- ✅ Baixar somente a pasta `skills`
+- ✅ Verificar Python e instalar se necessário
+- ✅ Configurar tudo automaticamente
+
+</details>
+
+### Instalação via IDE + Extensão Codex
+
+<details>
+<summary><b>Método IDE - Clique para expandir</b></summary>
+
+1. **Abra o VS Code** com a extensão Copilot/Codex instalada
+2. **Abra o Terminal Integrado** (Ctrl + ` ou View > Terminal)
+3. **Cole e execute** o comando PowerShell acima
+4. **Reinicie o VS Code** após conclusão
+5. **Verifique a instalação:**
+   - Vá para `Explorer` (Ctrl + Shift + E)
+   - Procure pela pasta `.agents/skills`
+   - Você deve ver 4 pastas: `frontend-design`, `software-engineer`, `qa`, `security`
+
+**Pronto!** Agora você pode usar as skills digitando `/frontend-design`, `/software-engineer`, `/qa` ou `/security` no chat Copilot.
+
+</details>
+
+### Instalação Pessoal (manual)
+
+<details>
+<summary><b>Método manual - Clique para expandir</b></summary>
 
 Clone no seu diretório de plugins:
 
@@ -310,10 +349,10 @@ Crie o arquivo `~/.agents/plugins/marketplace.json`:
 
 </details>
 
-### Instalação por Projeto
+### Instalação por Projeto (manual)
 
 <details>
-<summary><b>Clique para expandir</b></summary>
+<summary><b>Método por projeto - Clique para expandir</b></summary>
 
 Clone dentro do seu repositório:
 
@@ -411,16 +450,56 @@ Melhor será a qualidade da skill.
 
 ---
 
-## Atualizações
+## Atualização
 
-### Instalação Pessoal
+### Atualização via PowerShell (Windows - Recomendado)
+
+<details>
+<summary><b>Método automático - Clique para expandir</b></summary>
+
+Abra o **PowerShell** e execute:
+
+```powershell
+if (-not (Test-Path ".\.agents")) { Write-Host "Pasta .agents nao encontrada." -ForegroundColor Red; exit }; Set-Location .\.agents; $before = git rev-parse HEAD; git fetch origin main -q; $after = git rev-parse origin/main; if ($before -eq $after) { Write-Host "Ja esta atualizado." -ForegroundColor Green } else { git pull origin main -q; Write-Host "Atualizado! $($before.Substring(0,7)) -> $($after.Substring(0,7))" -ForegroundColor Cyan }; Set-Location ..
+```
+
+**O script irá:**
+
+- ✅ Verificar se a pasta `.agents` existe
+- ✅ Comparar versão local com remota
+- ✅ Atualizar automaticamente se houver mudanças
+- ✅ Exibir o hash dos commits (antes → depois)
+
+</details>
+
+### Atualização via IDE + Extensão Codex
+
+<details>
+<summary><b>Método IDE - Clique para expandir</b></summary>
+
+1. **Abra o Terminal Integrado** no VS Code (Ctrl + `)
+2. **Cole e execute** o comando PowerShell acima
+3. **Verifique a atualização** olhando as cores de status:
+   - 🟢 Verde = Já está atualizado
+   - 🔵 Cyan = Atualização concluída com sucesso
+   - 🔴 Vermelho = Erro (verifique o caminho)
+4. **Reinicie o VS Code** se necessário
+
+</details>
+
+### Atualização Manual
+
+<details>
+<summary><b>Método manual - Clique para expandir</b></summary>
+
+**Instalação Pessoal:**
 
 ```bash
 cd ~/.codex/plugins/codex-code-skills
 git pull
 ```
 
-### Instalação por Projeto
+**Instalação por Projeto:**
 
 ```bash
 cd ./plugins/codex-code-skills
@@ -429,23 +508,68 @@ git pull
 
 **Depois reinicie o Codex.**
 
+</details>
+
 ---
 
 ## Desinstalação
 
-### Instalação Pessoal
+### Desinstalação via PowerShell (Windows - Recomendado)
+
+<details>
+<summary><b>Método automático - Clique para expandir</b></summary>
+
+Abra o **PowerShell** e execute:
+
+```powershell
+if (Test-Path ".\.agents") { Remove-Item ".\.agents" -Recurse -Force; Write-Host "Pasta .agents removida." -ForegroundColor Green } else { Write-Host "Pasta .agents nao encontrada." -ForegroundColor Yellow }
+```
+
+**O script irá:**
+
+- ✅ Verificar se a pasta `.agents` existe
+- ✅ Remover a pasta e todo seu conteúdo permanentemente
+- ✅ Exibir mensagem de confirmação
+
+⚠️ **Aviso:** Esta operação é irreversível. Certifique-se de fazer backup se necessário.
+
+</details>
+
+### Desinstalação via IDE + Extensão Codex
+
+<details>
+<summary><b>Método IDE - Clique para expandir</b></summary>
+
+1. **Abra o Terminal Integrado** no VS Code (Ctrl + `)
+2. **Cole e execute** o comando PowerShell acima
+3. **Verifique a remoção:**
+   - Vá para `Explorer` (Ctrl + Shift + E)
+   - Confirme que a pasta `.agents` foi removida
+   - 🟢 Se não aparecer mais, a desinstalação foi bem-sucedida
+4. **Reinicie o VS Code**
+
+</details>
+
+### Desinstalação Manual
+
+<details>
+<summary><b>Método manual - Clique para expandir</b></summary>
+
+**Instalação Pessoal:**
 
 ```bash
 rm -rf ~/.codex/plugins/codex-code-skills
 # Remove a entrada de ~/.agents/plugins/marketplace.json
 ```
 
-### Instalação por Projeto
+**Instalação por Projeto:**
 
 ```bash
 rm -rf ./plugins/codex-code-skills
 # Remove a entrada de ./.agents/plugins/marketplace.json
 ```
+
+</details>
 
 ---
 
@@ -512,7 +636,7 @@ MIT
 
 <div align="center">
 
-### Criado com ❤️ por **Jeanrk88**
+### Criado por **Jeanrk88**
 
 [GitHub](https://github.com/Jeanrk88) • [Report Issues](https://github.com/Jeanrk88/code-skills/issues)
 
