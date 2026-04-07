@@ -522,7 +522,7 @@ git pull
 Abra o **PowerShell** na IDE e execute:
 
 ```
-if (Test-Path "..agents") { Remove-Item "..agents" -Recurse -Force; Write-Host "Pasta .agents removida." -ForegroundColor Green } else { Write-Host "Pasta .agents nao encontrada." -ForegroundColor Yellow }
+if (Test-Path ".\.agents") { Remove-Item ".\.agents" -Recurse -Force; Write-Host "Pasta .agents removida." -ForegroundColor Green } else { Write-Host "Pasta .agents nao encontrada." -ForegroundColor Yellow }
 
 ```
 
