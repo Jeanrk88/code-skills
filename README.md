@@ -231,32 +231,37 @@ Relatório com riscos importantes e fixes recomendados.
 ## Estrutura do Repositório
 
 ```
-.
-├── README.md
-├── CHANGELOG.md
-├── LICENSE
-├── skills/
-│   ├── frontend-design/
-│   │   └── SKILL.md
-│   ├── software-engineer/
-│   │   └── SKILL.md
-│   ├── qa/
-│   │   └── SKILL.md
-│   └── security/
-│       ├── SKILL.md
-│       ├── references/
-│       │   ├── attack-patterns.md
-│       │   ├── fix-templates.md
-│       │   ├── owasp-top10.md
-│       │   └── report-template.md
-│       └── scripts/
-│           ├── firewall_setup.py
-│           ├── security_scanner.py
-│           ├── secret_scanner.py
-│           └── ...
+├── .codex-plugin/
+│   ├── plugin.json
 └── examples/
     ├── marketplace.personal.json
     └── marketplace.repo.json
+├── skills/
+│   ├── frontend-design/
+│   │   └── SKILL.md
+│   ├── qa/
+│   │   └── SKILL.md
+│   ├── security/
+│   │   ├── SKILL.md
+│   │   ├── references/
+│   │   │   ├── attack-patterns.md
+│   │   │   ├── fix-templates.md
+│   │   │   ├── owasp-top10.md
+│   │   │   └── report-template.md
+│   │   └── scripts/
+│   │       ├── firewall_setup.py
+│   │       ├── generate_report.py
+│   │       ├── monitor_daemon.py
+│   │       ├── secret_scanner.py
+│   │       ├── security_scanner.py
+│   │       ├── security_scanner.test.py
+│   │       └── stack_detector.py
+│   └── software-engineer/
+│       └── SKILL.md
+├── README.md
+├── CHANGELOG.md
+├── LICENSE
+├── .gitignore
 ```
 
 ---
