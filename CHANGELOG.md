@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
-- Initial public release of Jeanrk88 Code Skills
+- Initial public release of Codex Code Skills
 - `frontend-design` skill
 - `software-engineer` skill
 - `qa` skill

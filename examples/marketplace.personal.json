@@ -1,11 +1,11 @@
 {
-  "name": "jeanrk88-marketplace",
+  "name": "codex-marketplace",
   "plugins": [
     {
-      "name": "jeanrk88-code-skills",
+      "name": "codex-code-skills",
       "source": {
         "source": "local",
-        "path": "./.codex/plugins/jeanrk88-code-skills"
+        "path": "./.codex/plugins/codex-code-skills"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -13,7 +13,7 @@
       },
       "category": "Productivity",
       "interface": {
-        "displayName": "Jeanrk88 Code Skills"
+        "displayName": "Codex Code Skills"
       }
     }
   ]
